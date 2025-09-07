@@ -5,7 +5,7 @@ docker run -d --name spark-thrift-hive \
   -p 4040:4040 \
   --user root \
   -e HIVE_AUTH_USERS="admin:Admin@123,analyst:Analyst@123" \
-  -v /Users/bytedance/IdeaProjects/spark-auth/target/spark-auth-1.0-SNAPSHOT.jar:/opt/bitnami/spark/jars/custom-auth.jar \
+  -v /本地地址/spark-auth-1.0-SNAPSHOT.jar:/opt/bitnami/spark/jars/custom-auth.jar \
   bitnami/spark:3.5.1 \
   /opt/bitnami/spark/sbin/start-thriftserver.sh \
   --hiveconf hive.server2.thrift.bind.host=0.0.0.0 \
